@@ -1,0 +1,72 @@
+aid: canny
+name: Canny
+description: >-
+  Canny is a customer feedback and product management platform that
+  collects, organizes, and prioritizes feature requests from users and
+  internal teams, ties them to roadmaps and changelogs, and surfaces
+  product analytics. The Canny REST API exposes boards, posts, comments,
+  votes, users, companies, categories, status changes, and tags so
+  product teams can integrate feedback with CRMs, support tools, and
+  issue trackers. Requests use a secret API key sent as a POST parameter
+  apiKey or in the x-api-key header against the base URL
+  https://canny.io/api/v1.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Customer Feedback
+  - Product Management
+  - Feature Requests
+  - Roadmap
+  - Changelog
+  - Voice of Customer
+  - SaaS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/canny/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: canny:v1-api
+    name: Canny REST API
+    description: >-
+      REST API for retrieving and managing Canny boards, posts,
+      comments, votes, status changes, users, companies, categories,
+      tags, and changelog entries. Requests authenticate using a
+      secret API key sent in the apiKey POST parameter or x-api-key
+      header.
+    humanURL: https://developers.canny.io/api-reference
+    baseURL: https://canny.io/api/v1
+    tags:
+      - Customer Feedback
+      - Product Management
+      - Posts
+      - Boards
+      - Votes
+      - Comments
+    properties:
+      - type: Documentation
+        url: https://developers.canny.io/
+      - type: API Reference
+        url: https://developers.canny.io/api-reference
+      - type: Help Article
+        url: https://help.canny.io/en/articles/4195400-the-canny-api
+
+common:
+  - type: Website
+    url: https://canny.io
+  - type: Developer Portal
+    url: https://developers.canny.io
+  - type: Documentation
+    url: https://developers.canny.io/
+  - type: Pricing
+    url: https://canny.io/pricing
+  - type: Sign Up
+    url: https://canny.io/signup
+  - type: Help Center
+    url: https://help.canny.io
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/canny-io
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
