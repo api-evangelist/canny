@@ -46,7 +46,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developers.canny.io/
-      - type: API Reference
+      - type: APIReference
         url: https://developers.canny.io/api-reference
       - type: Help Article
         url: https://help.canny.io/en/articles/4195400-the-canny-api
@@ -60,7 +60,7 @@ common:
     url: https://developers.canny.io/
   - type: Pricing
     url: https://canny.io/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://canny.io/signup
   - type: Help Center
     url: https://help.canny.io
