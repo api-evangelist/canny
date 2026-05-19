@@ -52,6 +52,8 @@ apis:
         url: https://help.canny.io/en/articles/4195400-the-canny-api
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/Canny
   - type: Website
     url: https://canny.io
   - type: Developer Portal
