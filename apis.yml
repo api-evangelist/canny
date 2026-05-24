@@ -69,6 +69,8 @@ common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/canny-io
 
+  - type: LLMsTxt
+    url: https://canny.io/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
