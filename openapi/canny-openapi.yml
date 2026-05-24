@@ -1,0 +1,664 @@
+openapi: 3.1.0
+info:
+  title: Canny REST API
+  description: |
+    REST API for retrieving and managing Canny customer-feedback resources:
+    boards, categories, changelog entries, comments, companies, ideas, posts,
+    status changes, tags, users, and votes. All requests are POST and JSON-
+    bodied. Authentication is a secret API key passed in the apiKey body
+    parameter (or the x-api-key header on supported endpoints).
+
+    This specification is a best-effort, hand-authored representation of the
+    publicly documented v1/v2 endpoints at https://developers.canny.io/.
+    Request and response payloads are intentionally generic where the public
+    docs do not enumerate the full property schema.
+  version: "1.0.0"
+  contact:
+    name: Canny
+    url: https://developers.canny.io/
+servers:
+  - url: https://canny.io/api/v1
+    description: Canny v1 base URL
+  - url: https://canny.io/api/v2
+    description: Canny v2 base URL (cursor-paginated endpoints)
+security:
+  - apiKeyBody: []
+  - apiKeyHeader: []
+tags:
+  - name: Boards
+  - name: Categories
+  - name: ChangelogEntries
+  - name: Comments
+  - name: Companies
+  - name: Groups
+  - name: Ideas
+  - name: Insights
+  - name: Opportunities
+  - name: Posts
+  - name: StatusChanges
+  - name: Tags
+  - name: Users
+  - name: Votes
+  - name: Autopilot
+paths:
+  /boards/retrieve:
+    post:
+      tags: [Boards]
+      summary: Retrieve a board
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthedRequest'
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /boards/list:
+    post:
+      tags: [Boards]
+      summary: List boards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PagedAuthedRequest'
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /categories/retrieve:
+    post:
+      tags: [Categories]
+      summary: Retrieve a category
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /categories/list:
+    post:
+      tags: [Categories]
+      summary: List categories
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /categories/create:
+    post:
+      tags: [Categories]
+      summary: Create a category
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /categories/delete:
+    post:
+      tags: [Categories]
+      summary: Delete a category
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /entries/create:
+    post:
+      tags: [ChangelogEntries]
+      summary: Create a changelog entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /entries/list:
+    post:
+      tags: [ChangelogEntries]
+      summary: List changelog entries
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /comments/retrieve:
+    post:
+      tags: [Comments]
+      summary: Retrieve a comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /comments/list:
+    post:
+      tags: [Comments]
+      summary: List comments
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /comments/create:
+    post:
+      tags: [Comments]
+      summary: Create a comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /comments/delete:
+    post:
+      tags: [Comments]
+      summary: Delete a comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /companies/list:
+    post:
+      tags: [Companies]
+      summary: List companies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /companies/update:
+    post:
+      tags: [Companies]
+      summary: Update a company
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /companies/delete:
+    post:
+      tags: [Companies]
+      summary: Delete a company
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /groups/list:
+    post:
+      tags: [Groups]
+      summary: List groups
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /groups/retrieve:
+    post:
+      tags: [Groups]
+      summary: Retrieve a group
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /ideas/list:
+    post:
+      tags: [Ideas]
+      summary: List ideas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /ideas/retrieve:
+    post:
+      tags: [Ideas]
+      summary: Retrieve an idea
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /ideas/merge:
+    post:
+      tags: [Ideas]
+      summary: Merge two ideas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /ideas/delete:
+    post:
+      tags: [Ideas]
+      summary: Delete an idea
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /insights/list:
+    post:
+      tags: [Insights]
+      summary: List insights
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /insights/retrieve:
+    post:
+      tags: [Insights]
+      summary: Retrieve an insight
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /opportunities/list:
+    post:
+      tags: [Opportunities]
+      summary: List opportunities
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /posts/retrieve:
+    post:
+      tags: [Posts]
+      summary: Retrieve a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/list:
+    post:
+      tags: [Posts]
+      summary: List posts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /posts/create:
+    post:
+      tags: [Posts]
+      summary: Create a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/change_board:
+    post:
+      tags: [Posts]
+      summary: Move a post to another board
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/change_category:
+    post:
+      tags: [Posts]
+      summary: Change a post's category
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/change_status:
+    post:
+      tags: [Posts]
+      summary: Change a post's status
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/merge:
+    post:
+      tags: [Posts]
+      summary: Merge two posts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/add_tag:
+    post:
+      tags: [Posts]
+      summary: Add a tag to a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/remove_tag:
+    post:
+      tags: [Posts]
+      summary: Remove a tag from a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/update:
+    post:
+      tags: [Posts]
+      summary: Update a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/delete:
+    post:
+      tags: [Posts]
+      summary: Delete a post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/link_jira:
+    post:
+      tags: [Posts]
+      summary: Link a post to a Jira issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /posts/unlink_jira:
+    post:
+      tags: [Posts]
+      summary: Unlink a post from a Jira issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /tags/retrieve:
+    post:
+      tags: [Tags]
+      summary: Retrieve a tag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /tags/list:
+    post:
+      tags: [Tags]
+      summary: List tags
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /tags/create:
+    post:
+      tags: [Tags]
+      summary: Create a tag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /users/list:
+    post:
+      tags: [Users]
+      summary: List users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /users/retrieve:
+    post:
+      tags: [Users]
+      summary: Retrieve a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /users/create_or_update:
+    post:
+      tags: [Users]
+      summary: Create or update a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /users/delete:
+    post:
+      tags: [Users]
+      summary: Delete a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /users/remove_from_company:
+    post:
+      tags: [Users]
+      summary: Remove a user from a company
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /votes/retrieve:
+    post:
+      tags: [Votes]
+      summary: Retrieve a vote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /votes/list:
+    post:
+      tags: [Votes]
+      summary: List votes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /votes/create:
+    post:
+      tags: [Votes]
+      summary: Create a vote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /votes/delete:
+    post:
+      tags: [Votes]
+      summary: Delete a vote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+  /status_changes/list:
+    post:
+      tags: [StatusChanges]
+      summary: List status changes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/PagedAuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericList' }
+  /autopilot/enqueue_feedback:
+    post:
+      tags: [Autopilot]
+      summary: Enqueue feedback for Canny Autopilot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AuthedRequest' }
+      responses:
+        '200': { $ref: '#/components/responses/GenericObject' }
+components:
+  securitySchemes:
+    apiKeyBody:
+      type: apiKey
+      in: query
+      name: apiKey
+      description: |
+        Secret API key. Canny documents the key as a body parameter named
+        `apiKey`; it is modeled here as an `apiKey` security scheme.
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    AuthedRequest:
+      type: object
+      required: [apiKey]
+      properties:
+        apiKey:
+          type: string
+          description: Secret API key for the Canny company.
+      additionalProperties: true
+    PagedAuthedRequest:
+      allOf:
+        - $ref: '#/components/schemas/AuthedRequest'
+        - type: object
+          properties:
+            limit:
+              type: integer
+              description: Page size limit.
+            skip:
+              type: integer
+              description: v1 skip-based pagination offset.
+            cursor:
+              type: string
+              description: v2 cursor-based pagination token.
+    GenericObject:
+      type: object
+      additionalProperties: true
+    GenericList:
+      type: object
+      properties:
+        hasMore:
+          type: boolean
+        cursor:
+          type: string
+      additionalProperties: true
+  responses:
+    GenericObject:
+      description: Single resource response.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/GenericObject' }
+    GenericList:
+      description: Paginated list response.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/GenericList' }
