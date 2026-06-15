@@ -1,0 +1,903 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canny REST API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Boards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a board",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/boards/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a board"
+        },
+        {
+          "info": {
+            "name": "List boards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/boards/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List boards"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/categories/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a category"
+        },
+        {
+          "info": {
+            "name": "List categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/categories/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List categories"
+        },
+        {
+          "info": {
+            "name": "Create a category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/categories/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a category"
+        },
+        {
+          "info": {
+            "name": "Delete a category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/categories/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a category"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ChangelogEntries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a changelog entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/entries/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a changelog entry"
+        },
+        {
+          "info": {
+            "name": "List changelog entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/entries/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List changelog entries"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Comments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/comments/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a comment"
+        },
+        {
+          "info": {
+            "name": "List comments",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/comments/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List comments"
+        },
+        {
+          "info": {
+            "name": "Create a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/comments/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a comment"
+        },
+        {
+          "info": {
+            "name": "Delete a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/comments/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a comment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/companies/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List companies"
+        },
+        {
+          "info": {
+            "name": "Update a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/companies/update",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a company"
+        },
+        {
+          "info": {
+            "name": "Delete a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/companies/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a company"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/groups/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List groups"
+        },
+        {
+          "info": {
+            "name": "Retrieve a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/groups/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a group"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Ideas",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List ideas",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/ideas/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List ideas"
+        },
+        {
+          "info": {
+            "name": "Retrieve an idea",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/ideas/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve an idea"
+        },
+        {
+          "info": {
+            "name": "Merge two ideas",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/ideas/merge",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Merge two ideas"
+        },
+        {
+          "info": {
+            "name": "Delete an idea",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/ideas/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete an idea"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Insights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List insights",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/insights/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List insights"
+        },
+        {
+          "info": {
+            "name": "Retrieve an insight",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/insights/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve an insight"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Opportunities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List opportunities",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/opportunities/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List opportunities"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Posts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a post"
+        },
+        {
+          "info": {
+            "name": "List posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List posts"
+        },
+        {
+          "info": {
+            "name": "Create a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a post"
+        },
+        {
+          "info": {
+            "name": "Move a post to another board",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/change_board",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Move a post to another board"
+        },
+        {
+          "info": {
+            "name": "Change a post's category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/change_category",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Change a post's category"
+        },
+        {
+          "info": {
+            "name": "Change a post's status",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/change_status",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Change a post's status"
+        },
+        {
+          "info": {
+            "name": "Merge two posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/merge",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Merge two posts"
+        },
+        {
+          "info": {
+            "name": "Add a tag to a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/add_tag",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a tag to a post"
+        },
+        {
+          "info": {
+            "name": "Remove a tag from a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/remove_tag",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Remove a tag from a post"
+        },
+        {
+          "info": {
+            "name": "Update a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/update",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a post"
+        },
+        {
+          "info": {
+            "name": "Delete a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a post"
+        },
+        {
+          "info": {
+            "name": "Link a post to a Jira issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/link_jira",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Link a post to a Jira issue"
+        },
+        {
+          "info": {
+            "name": "Unlink a post from a Jira issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/unlink_jira",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Unlink a post from a Jira issue"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/tags/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a tag"
+        },
+        {
+          "info": {
+            "name": "List tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/tags/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List tags"
+        },
+        {
+          "info": {
+            "name": "Create a tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/tags/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a tag"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/users/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List users"
+        },
+        {
+          "info": {
+            "name": "Retrieve a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/users/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a user"
+        },
+        {
+          "info": {
+            "name": "Create or update a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/users/create_or_update",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or update a user"
+        },
+        {
+          "info": {
+            "name": "Delete a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/users/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a user"
+        },
+        {
+          "info": {
+            "name": "Remove a user from a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/users/remove_from_company",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Remove a user from a company"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Votes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a vote",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/votes/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a vote"
+        },
+        {
+          "info": {
+            "name": "List votes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/votes/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List votes"
+        },
+        {
+          "info": {
+            "name": "Create a vote",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/votes/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a vote"
+        },
+        {
+          "info": {
+            "name": "Delete a vote",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/votes/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a vote"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "StatusChanges",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List status changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/status_changes/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List status changes"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Autopilot",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Enqueue feedback for Canny Autopilot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/autopilot/enqueue_feedback",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enqueue feedback for Canny Autopilot"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
