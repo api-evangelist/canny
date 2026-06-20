@@ -11,7 +11,7 @@ description: >-
   apiKey or in the x-api-key header against the base URL
   https://canny.io/api/v1.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Customer Feedback
   - Product Management
