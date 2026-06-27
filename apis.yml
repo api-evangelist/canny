@@ -56,20 +56,20 @@ common:
     url: https://github.com/Canny
   - type: Website
     url: https://canny.io
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://developers.canny.io
   - type: Documentation
     url: https://developers.canny.io/
   - type: Pricing
     url: https://canny.io/pricing
-  - type: SignUp
+  - type: Signup
     url: https://canny.io/signup
   - type: Help Center
     url: https://help.canny.io
   - type: LinkedIn
     url: https://www.linkedin.com/company/canny-io
 
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://canny.io/llms.txt
 maintainers:
   - FN: Kin Lane
