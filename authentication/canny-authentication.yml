@@ -1,0 +1,25 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/canny-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  - query
+schemes:
+- name: apiKeyBody
+  type: apiKey
+  in: query
+  parameter: apiKey
+  description: |-
+    Secret API key. Canny documents the key as a body parameter named
+    `apiKey`; it is modeled here as an `apiKey` security scheme.
+  sources:
+  - openapi/canny-openapi.yml
+- name: apiKeyHeader
+  type: apiKey
+  in: header
+  parameter: x-api-key
+  sources:
+  - openapi/canny-openapi.yml
