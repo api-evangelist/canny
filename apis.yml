@@ -11,7 +11,19 @@ description: >-
   apiKey or in the x-api-key header against the base URL
   https://canny.io/api/v1.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/canny.png
 tags:
   - Customer Feedback
   - Product Management
@@ -26,31 +38,178 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: canny:v1-api
-    name: Canny REST API
-    description: >-
-      REST API for retrieving and managing Canny boards, posts,
-      comments, votes, status changes, users, companies, categories,
-      tags, and changelog entries. Requests authenticate using a
-      secret API key sent in the apiKey POST parameter or x-api-key
-      header.
-    humanURL: https://developers.canny.io/api-reference
-    baseURL: https://canny.io/api/v1
-    tags:
-      - Customer Feedback
-      - Product Management
-      - Posts
-      - Boards
-      - Votes
-      - Comments
-    properties:
-      - type: Documentation
-        url: https://developers.canny.io/
-      - type: APIReference
-        url: https://developers.canny.io/api-reference
-      - type: Help Article
-        url: https://help.canny.io/en/articles/4195400-the-canny-api
-
+- aid: canny:v1-api
+  name: Canny REST API
+  description: >-
+    REST API for retrieving and managing Canny boards, posts, comments, votes, status changes, users,
+    companies, categories, tags, and changelog entries. Requests authenticate using a secret API key sent
+    in the apiKey POST parameter or x-api-key header.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Customer Feedback
+  - Product Management
+  - Posts
+  - Boards
+  - Votes
+  - Comments
+  properties:
+  - type: Documentation
+    url: https://developers.canny.io/
+  - type: APIReference
+    url: https://developers.canny.io/api-reference
+  - type: Help Article
+    url: https://help.canny.io/en/articles/4195400-the-canny-api
+- aid: canny:canny-autopilot-api
+  name: Canny Autopilot API
+  description: The Autopilot API from Canny — 1 operation(s) for autopilot.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Autopilot
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-autopilot-api-openapi.yml
+- aid: canny:canny-boards-api
+  name: Canny Boards API
+  description: The Boards API from Canny — 2 operation(s) for boards.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Boards
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-boards-api-openapi.yml
+- aid: canny:canny-categories-api
+  name: Canny Categories API
+  description: The Categories API from Canny — 4 operation(s) for categories.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-categories-api-openapi.yml
+- aid: canny:canny-changelogentries-api
+  name: Canny ChangelogEntries API
+  description: The ChangelogEntries API from Canny — 2 operation(s) for changelogentries.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - ChangelogEntries
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-changelogentries-api-openapi.yml
+- aid: canny:canny-comments-api
+  name: Canny Comments API
+  description: The Comments API from Canny — 4 operation(s) for comments.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Comments
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-comments-api-openapi.yml
+- aid: canny:canny-companies-api
+  name: Canny Companies API
+  description: The Companies API from Canny — 3 operation(s) for companies.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-companies-api-openapi.yml
+- aid: canny:canny-groups-api
+  name: Canny Groups API
+  description: The Groups API from Canny — 2 operation(s) for groups.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-groups-api-openapi.yml
+- aid: canny:canny-ideas-api
+  name: Canny Ideas API
+  description: The Ideas API from Canny — 4 operation(s) for ideas.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Ideas
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-ideas-api-openapi.yml
+- aid: canny:canny-insights-api
+  name: Canny Insights API
+  description: The Insights API from Canny — 2 operation(s) for insights.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Insights
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-insights-api-openapi.yml
+- aid: canny:canny-opportunities-api
+  name: Canny Opportunities API
+  description: The Opportunities API from Canny — 1 operation(s) for opportunities.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Opportunities
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-opportunities-api-openapi.yml
+- aid: canny:canny-posts-api
+  name: Canny Posts API
+  description: The Posts API from Canny — 13 operation(s) for posts.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Posts
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-posts-api-openapi.yml
+- aid: canny:canny-statuschanges-api
+  name: Canny StatusChanges API
+  description: The StatusChanges API from Canny — 1 operation(s) for statuschanges.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - StatusChanges
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-statuschanges-api-openapi.yml
+- aid: canny:canny-tags-api
+  name: Canny Tags API
+  description: The Tags API from Canny — 3 operation(s) for tags.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-tags-api-openapi.yml
+- aid: canny:canny-users-api
+  name: Canny Users API
+  description: The Users API from Canny — 5 operation(s) for users.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-users-api-openapi.yml
+- aid: canny:canny-votes-api
+  name: Canny Votes API
+  description: The Votes API from Canny — 4 operation(s) for votes.
+  humanURL: https://developers.canny.io/api-reference
+  baseURL: https://canny.io/api/v1
+  tags:
+  - Votes
+  properties:
+  - type: OpenAPI
+    url: openapi/canny-votes-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/canny-agentic-access.yml
