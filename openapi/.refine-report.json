@@ -1,0 +1,42 @@
+{
+  "provider": "canny",
+  "sources": [
+    "canny-autopilot-api-openapi.yml",
+    "canny-boards-api-openapi.yml",
+    "canny-categories-api-openapi.yml",
+    "canny-changelogentries-api-openapi.yml",
+    "canny-comments-api-openapi.yml",
+    "canny-companies-api-openapi.yml",
+    "canny-groups-api-openapi.yml",
+    "canny-ideas-api-openapi.yml",
+    "canny-insights-api-openapi.yml",
+    "canny-opportunities-api-openapi.yml",
+    "canny-posts-api-openapi.yml",
+    "canny-statuschanges-api-openapi.yml",
+    "canny-tags-api-openapi.yml",
+    "canny-users-api-openapi.yml",
+    "canny-votes-api-openapi.yml"
+  ],
+  "outputs": [
+    "canny-autopilot-api-openapi.yml",
+    "canny-boards-api-openapi.yml",
+    "canny-categories-api-openapi.yml",
+    "canny-changelogentries-api-openapi.yml",
+    "canny-comments-api-openapi.yml",
+    "canny-companies-api-openapi.yml",
+    "canny-groups-api-openapi.yml",
+    "canny-ideas-api-openapi.yml",
+    "canny-insights-api-openapi.yml",
+    "canny-opportunities-api-openapi.yml",
+    "canny-posts-api-openapi.yml",
+    "canny-statuschanges-api-openapi.yml",
+    "canny-tags-api-openapi.yml",
+    "canny-users-api-openapi.yml",
+    "canny-votes-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
