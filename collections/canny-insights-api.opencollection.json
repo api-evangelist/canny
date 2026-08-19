@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canny REST Autopilot Insights API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Insights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List insights",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/insights/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List insights"
+        },
+        {
+          "info": {
+            "name": "Retrieve an insight",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/insights/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve an insight"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

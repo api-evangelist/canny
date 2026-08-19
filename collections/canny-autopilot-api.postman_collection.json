@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "55744e0f-ecde-4ed2-b996-5e778d73edec",
+      "name": "Autopilot",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6874f846-a7af-4c70-abf5-11a8495679d5",
+          "name": "Enqueue feedback for Canny Autopilot",
+          "request": {
+            "name": "Enqueue feedback for Canny Autopilot",
+            "description": {},
+            "url": {
+              "path": [
+                "autopilot",
+                "enqueue_feedback"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"apiKey\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b329c6e6-2a68-499a-9557-a18779a14c8d",
+              "name": "Single resource response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "autopilot",
+                    "enqueue_feedback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"apiKey\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": true,\n  \"key_2\": 8758\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://canny.io/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "37255649-ddb4-490d-9969-cfba10f27f8d",
+    "name": "Canny REST Autopilot API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for retrieving and managing Canny customer-feedback resources:\nboards, categories, changelog entries, comments, companies, ideas, posts,\nstatus changes, tags, users, and votes. All requests are POST and JSON-\nbodied. Authentication is a secret API key passed in the apiKey body\nparameter (or the x-api-key header on supported endpoints).\n\nThis specification is a best-effort, hand-authored representation of the\npublicly documented v1/v2 endpoints at https://developers.canny.io/.\nRequest and response payloads are intentionally generic where the public\ndocs do not enumerate the full property schema.\n\n\nContact Support:\n Name: Canny",
+      "type": "text/plain"
+    }
+  }
+}

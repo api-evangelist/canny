@@ -1,0 +1,221 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canny REST Autopilot Posts API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Posts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/retrieve",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a post"
+        },
+        {
+          "info": {
+            "name": "List posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/list",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "List posts"
+        },
+        {
+          "info": {
+            "name": "Create a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a post"
+        },
+        {
+          "info": {
+            "name": "Move a post to another board",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/change_board",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Move a post to another board"
+        },
+        {
+          "info": {
+            "name": "Change a post's category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/change_category",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Change a post's category"
+        },
+        {
+          "info": {
+            "name": "Change a post's status",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/change_status",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Change a post's status"
+        },
+        {
+          "info": {
+            "name": "Merge two posts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/merge",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Merge two posts"
+        },
+        {
+          "info": {
+            "name": "Add a tag to a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/add_tag",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a tag to a post"
+        },
+        {
+          "info": {
+            "name": "Remove a tag from a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/remove_tag",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Remove a tag from a post"
+        },
+        {
+          "info": {
+            "name": "Update a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/update",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a post"
+        },
+        {
+          "info": {
+            "name": "Delete a post",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/delete",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a post"
+        },
+        {
+          "info": {
+            "name": "Link a post to a Jira issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/link_jira",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Link a post to a Jira issue"
+        },
+        {
+          "info": {
+            "name": "Unlink a post from a Jira issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://canny.io/api/v1/posts/unlink_jira",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Unlink a post from a Jira issue"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

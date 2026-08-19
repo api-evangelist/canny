@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "740efd84-402c-4ab2-9138-d26a8b85fb2a",
+      "name": "Opportunities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f3ed9a43-22fe-463d-9ab7-7e1a843a5c38",
+          "name": "List opportunities",
+          "request": {
+            "name": "List opportunities",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"apiKey\": \"<string>\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\",\n  \"cursor\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "92a8f34b-3f36-4678-9cef-6dc1e007d577",
+              "name": "Paginated list response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"apiKey\": \"string\",\n  \"limit\": \"<integer>\",\n  \"skip\": \"<integer>\",\n  \"cursor\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"hasMore\": false,\n  \"cursor\": \"string\",\n  \"key_0\": 3983.074104458778,\n  \"key_1\": 3717,\n  \"key_2\": 4569,\n  \"key_3\": true,\n  \"key_4\": 2565.632124768793\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://canny.io/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8d01f761-1aa7-4498-b28b-f49d495bd5e1",
+    "name": "Canny REST Autopilot Opportunities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for retrieving and managing Canny customer-feedback resources:\nboards, categories, changelog entries, comments, companies, ideas, posts,\nstatus changes, tags, users, and votes. All requests are POST and JSON-\nbodied. Authentication is a secret API key passed in the apiKey body\nparameter (or the x-api-key header on supported endpoints).\n\nThis specification is a best-effort, hand-authored representation of the\npublicly documented v1/v2 endpoints at https://developers.canny.io/.\nRequest and response payloads are intentionally generic where the public\ndocs do not enumerate the full property schema.\n\n\nContact Support:\n Name: Canny",
+      "type": "text/plain"
+    }
+  }
+}
