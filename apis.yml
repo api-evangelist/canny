@@ -40,7 +40,7 @@ tags:
   - Customer Feedback
   - Product Management
   - Feature Requests
-  - Roadmap
+  - Roadmaps
   - Changelog
   - Voice of Customer
   - Software-as-a-Service
@@ -198,7 +198,7 @@ apis:
   humanURL: https://developers.canny.io/api-reference
   baseURL: https://canny.io/api/v1
   tags:
-  - StatusChanges
+  - Status Changes
   tags_raw:
   - StatusChanges
   properties:
