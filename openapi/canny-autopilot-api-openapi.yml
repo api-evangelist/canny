@@ -1,26 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Canny REST Autopilot API
   description: 'REST API for retrieving and managing Canny customer-feedback resources:
 
     boards, categories, changelog entries, comments, companies, ideas, posts,
 
-    status changes, tags, users, and votes. All requests are POST and JSON-
-
-    bodied. Authentication is a secret API key passed in the apiKey body
-
-    parameter (or the x-api-key header on supported endpoints).
-
-
-    This specification is a best-effort, hand-authored representation of the
-
-    publicly documented v1/v2 endpoints at https://developers.canny.io/.
-
-    Request and response payloads are intentionally generic where the public
-
-    docs do not enumerate the full property schema.
-
-    '
+    status changes, tags, users, and votes.'
   version: 1.0.0
   contact:
     name: Canny
@@ -50,6 +35,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/GenericObject'
+      operationId: postAutopilotEnqueueFeedback
+      x-operation-id-source: derived
 components:
   schemas:
     GenericObject:

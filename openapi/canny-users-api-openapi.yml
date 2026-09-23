@@ -1,26 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Canny REST Autopilot Users API
+  title: Canny REST Users API
   description: 'REST API for retrieving and managing Canny customer-feedback resources:
 
     boards, categories, changelog entries, comments, companies, ideas, posts,
 
-    status changes, tags, users, and votes. All requests are POST and JSON-
-
-    bodied. Authentication is a secret API key passed in the apiKey body
-
-    parameter (or the x-api-key header on supported endpoints).
-
-
-    This specification is a best-effort, hand-authored representation of the
-
-    publicly documented v1/v2 endpoints at https://developers.canny.io/.
-
-    Request and response payloads are intentionally generic where the public
-
-    docs do not enumerate the full property schema.
-
-    '
+    status changes, tags, users, and votes.'
   version: 1.0.0
   contact:
     name: Canny
@@ -50,6 +35,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/GenericList'
+      operationId: postUsersList
+      x-operation-id-source: derived
   /users/retrieve:
     post:
       tags:
@@ -64,6 +51,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/GenericObject'
+      operationId: postUsersRetrieve
+      x-operation-id-source: derived
   /users/create_or_update:
     post:
       tags:
@@ -78,6 +67,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/GenericObject'
+      operationId: postUsersCreateOrUpdate
+      x-operation-id-source: derived
   /users/delete:
     post:
       tags:
@@ -92,6 +83,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/GenericObject'
+      operationId: postUsersDelete
+      x-operation-id-source: derived
   /users/remove_from_company:
     post:
       tags:
@@ -106,8 +99,31 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/GenericObject'
+      operationId: postUsersRemoveFromCompany
+      x-operation-id-source: derived
 components:
+  responses:
+    GenericList:
+      description: Paginated list response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericList'
+    GenericObject:
+      description: Single resource response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericObject'
   schemas:
+    GenericList:
+      type: object
+      properties:
+        hasMore:
+          type: boolean
+        cursor:
+          type: string
+      additionalProperties: true
     PagedAuthedRequest:
       allOf:
       - $ref: '#/components/schemas/AuthedRequest'
@@ -122,14 +138,6 @@ components:
           cursor:
             type: string
             description: v2 cursor-based pagination token.
-    GenericList:
-      type: object
-      properties:
-        hasMore:
-          type: boolean
-        cursor:
-          type: string
-      additionalProperties: true
     GenericObject:
       type: object
       additionalProperties: true
@@ -142,19 +150,6 @@ components:
           type: string
           description: Secret API key for the Canny company.
       additionalProperties: true
-  responses:
-    GenericObject:
-      description: Single resource response.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericObject'
-    GenericList:
-      description: Paginated list response.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericList'
   securitySchemes:
     apiKeyBody:
       type: apiKey
