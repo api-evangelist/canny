@@ -38,6 +38,13 @@ paths:
       operationId: postAutopilotEnqueueFeedback
       x-operation-id-source: derived
 components:
+  responses:
+    GenericObject:
+      description: Single resource response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericObject'
   schemas:
     GenericObject:
       type: object
@@ -51,13 +58,6 @@ components:
           type: string
           description: Secret API key for the Canny company.
       additionalProperties: true
-  responses:
-    GenericObject:
-      description: Single resource response.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericObject'
   securitySchemes:
     apiKeyBody:
       type: apiKey

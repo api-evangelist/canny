@@ -70,19 +70,6 @@ paths:
       operationId: postCompaniesDelete
       x-operation-id-source: derived
 components:
-  responses:
-    GenericList:
-      description: Paginated list response.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericList'
-    GenericObject:
-      description: Single resource response.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericObject'
   schemas:
     GenericList:
       type: object
@@ -91,6 +78,9 @@ components:
           type: boolean
         cursor:
           type: string
+      additionalProperties: true
+    GenericObject:
+      type: object
       additionalProperties: true
     PagedAuthedRequest:
       allOf:
@@ -106,9 +96,6 @@ components:
           cursor:
             type: string
             description: v2 cursor-based pagination token.
-    GenericObject:
-      type: object
-      additionalProperties: true
     AuthedRequest:
       type: object
       required:
@@ -118,6 +105,19 @@ components:
           type: string
           description: Secret API key for the Canny company.
       additionalProperties: true
+  responses:
+    GenericObject:
+      description: Single resource response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericObject'
+    GenericList:
+      description: Paginated list response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericList'
   securitySchemes:
     apiKeyBody:
       type: apiKey
