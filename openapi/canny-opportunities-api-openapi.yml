@@ -53,14 +53,6 @@ components:
           cursor:
             type: string
             description: v2 cursor-based pagination token.
-    GenericList:
-      type: object
-      properties:
-        hasMore:
-          type: boolean
-        cursor:
-          type: string
-      additionalProperties: true
     AuthedRequest:
       type: object
       required:
@@ -69,6 +61,14 @@ components:
         apiKey:
           type: string
           description: Secret API key for the Canny company.
+      additionalProperties: true
+    GenericList:
+      type: object
+      properties:
+        hasMore:
+          type: boolean
+        cursor:
+          type: string
       additionalProperties: true
   responses:
     GenericList:

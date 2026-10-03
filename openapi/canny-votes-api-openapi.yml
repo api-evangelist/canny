@@ -95,9 +95,6 @@ components:
         cursor:
           type: string
       additionalProperties: true
-    GenericObject:
-      type: object
-      additionalProperties: true
     PagedAuthedRequest:
       allOf:
       - $ref: '#/components/schemas/AuthedRequest'
@@ -120,6 +117,9 @@ components:
         apiKey:
           type: string
           description: Secret API key for the Canny company.
+      additionalProperties: true
+    GenericObject:
+      type: object
       additionalProperties: true
   responses:
     GenericObject:
