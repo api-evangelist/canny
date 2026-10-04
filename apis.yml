@@ -238,6 +238,9 @@ apis:
   - type: OpenAPI
     url: openapi/canny-votes-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/canny-capability-edges.yml
+    name: Canny Business Capability Map
   - type: AgenticAccess
     url: agentic-access/canny-agentic-access.yml
   - type: DomainSecurity

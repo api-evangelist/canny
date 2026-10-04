@@ -1,0 +1,34 @@
+slug: canny
+provider: Canny
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Posts
+  spec_file: canny-posts-api-openapi.yml
+  capability_id: BC-4200.10
+  capability_id_l1: BC-4200
+  capability_name: Product Discovery & Backlog Management
+  confidence: 0.8
+  evidence: POST /posts/change_status — "Change a post's status"; POST /posts/merge — "Merge two posts";
+    POST /posts/link_jira — "Link a post to a Jira issue"
+  reason: 'Posts are the feature-request records: created, categorised, status-changed, merged and linked
+    to engineering issues — i.e. stewardship of a product feedback backlog feeding discovery and prioritisation.'
+- tag: Ideas
+  spec_file: canny-ideas-api-openapi.yml
+  capability_id: BC-4200.10
+  capability_id_l1: BC-4200
+  capability_name: Product Discovery & Backlog Management
+  confidence: 0.75
+  evidence: POST /ideas/list — "List ideas"; POST /ideas/merge — "Merge two ideas"
+  reason: Idea capture, deduplication by merging, and deletion are ideation and backlog stewardship activities
+    feeding product decisions, matching Product Discovery & Backlog Management in the software frame.
