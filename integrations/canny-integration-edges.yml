@@ -28,7 +28,24 @@ edges:
       - Track
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Atlassian Marketplace
+  partner: atlassian
+  partner_match: aggregator
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://marketplace.atlassian.com/vendors/1214979/canny
+  listing_count: 1
+  apps:
+  - Canny for Jira
+  publisher_name: Canny
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
 method: searched
 checked:
+- https://marketplace.atlassian.com/
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-canny
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-canny
+marketplace_apps: []
