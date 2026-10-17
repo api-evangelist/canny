@@ -231,9 +231,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    GenericObject:
-      type: object
-      additionalProperties: true
     PagedAuthedRequest:
       allOf:
       - $ref: '#/components/schemas/AuthedRequest'
@@ -248,6 +245,9 @@ components:
           cursor:
             type: string
             description: v2 cursor-based pagination token.
+    GenericObject:
+      type: object
+      additionalProperties: true
     GenericList:
       type: object
       properties:

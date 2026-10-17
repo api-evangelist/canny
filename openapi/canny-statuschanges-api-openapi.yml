@@ -38,14 +38,15 @@ paths:
       operationId: postStatusChangesList
       x-operation-id-source: derived
 components:
-  responses:
-    GenericList:
-      description: Paginated list response.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericList'
   schemas:
+    GenericList:
+      type: object
+      properties:
+        hasMore:
+          type: boolean
+        cursor:
+          type: string
+      additionalProperties: true
     PagedAuthedRequest:
       allOf:
       - $ref: '#/components/schemas/AuthedRequest'
@@ -60,14 +61,6 @@ components:
           cursor:
             type: string
             description: v2 cursor-based pagination token.
-    GenericList:
-      type: object
-      properties:
-        hasMore:
-          type: boolean
-        cursor:
-          type: string
-      additionalProperties: true
     AuthedRequest:
       type: object
       required:
@@ -77,6 +70,13 @@ components:
           type: string
           description: Secret API key for the Canny company.
       additionalProperties: true
+  responses:
+    GenericList:
+      description: Paginated list response.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericList'
   securitySchemes:
     apiKeyBody:
       type: apiKey
