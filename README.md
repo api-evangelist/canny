@@ -1,4 +1,4 @@
-# Canny (canny)
+# Canny
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,128 @@
 
 Canny is a customer feedback and product management platform that collects, organizes, and prioritizes feature requests from users and internal teams, ties them to roadmaps and changelogs, and surfaces product analytics. The Canny REST API exposes boards, posts, comments, votes, users, companies, categories, status changes, and tags so product teams can integrate feedback with CRMs, support tools, and issue trackers. Requests use a secret API key sent as a POST parameter apiKey or in the x-api-key header against the base URL https://canny.io/api/v1.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/canny/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/canny/refs/heads/main/apis.yml)
+**Areas:** Customer Feedback · Product Management · Feature Requests · Roadmaps · Changelog · Voice of Customer · Software-as-a-Service
 
-## Scope
+## Canny on APIs.io
 
-- **Type:** Index
+Everything profiled for Canny is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/canny/](https://apis.io/providers/canny/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (16)
 
-- Customer Feedback
-- Product Management
-- Feature Requests
-- Roadmap
-- Changelog
-- Voice of Customer
-- SaaS
+- [Canny REST API](https://apis.io/apis/canny/v1-api/) — REST API for retrieving and managing Canny boards, posts, comments, votes, status changes, users, companies, categories, tags, and changelog entries.…
+- [Canny Autopilot API](https://apis.io/apis/canny/canny-autopilot-api/) — The Autopilot API from Canny — 1 operation(s) for autopilot.
+- [Canny Boards API](https://apis.io/apis/canny/canny-boards-api/) — The Boards API from Canny — 2 operation(s) for boards.
+- [Canny Categories API](https://apis.io/apis/canny/canny-categories-api/) — The Categories API from Canny — 4 operation(s) for categories.
+- [Canny ChangelogEntries API](https://apis.io/apis/canny/canny-changelogentries-api/) — The ChangelogEntries API from Canny — 2 operation(s) for changelogentries.
+- [Canny Comments API](https://apis.io/apis/canny/canny-comments-api/) — The Comments API from Canny — 4 operation(s) for comments.
+- [Canny Companies API](https://apis.io/apis/canny/canny-companies-api/) — The Companies API from Canny — 3 operation(s) for companies.
+- [Canny Groups API](https://apis.io/apis/canny/canny-groups-api/) — The Groups API from Canny — 2 operation(s) for groups.
+- [Canny Ideas API](https://apis.io/apis/canny/canny-ideas-api/) — The Ideas API from Canny — 4 operation(s) for ideas.
+- [Canny Insights API](https://apis.io/apis/canny/canny-insights-api/) — The Insights API from Canny — 2 operation(s) for insights.
+- [Canny Opportunities API](https://apis.io/apis/canny/canny-opportunities-api/) — The Opportunities API from Canny — 1 operation(s) for opportunities.
+- [Canny Posts API](https://apis.io/apis/canny/canny-posts-api/) — The Posts API from Canny — 13 operation(s) for posts.
+- [Canny StatusChanges API](https://apis.io/apis/canny/canny-statuschanges-api/) — The StatusChanges API from Canny — 1 operation(s) for statuschanges.
+- [Canny Tags API](https://apis.io/apis/canny/canny-tags-api/) — The Tags API from Canny — 3 operation(s) for tags.
+- [Canny Users API](https://apis.io/apis/canny/canny-users-api/) — The Users API from Canny — 5 operation(s) for users.
+- [Canny Votes API](https://apis.io/apis/canny/canny-votes-api/) — The Votes API from Canny — 4 operation(s) for votes.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Canny REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for retrieving and managing Canny boards, posts, comments, votes, status changes, users, companies, categories, tags, and changelog entries. Requests authenticate using a secret API key sent in the apiKey POST parameter or x-api-key header.
+- [Canny Agentic Access](https://apis.io/agentic-access/canny/canny-agentic-access/)
 
-- **Human URL:** [https://developers.canny.io/api-reference](https://developers.canny.io/api-reference)
-- **Base URL:** `https://canny.io/api/v1`
+#### Collections (16)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Customer Feedback
-- Product Management
-- Posts
-- Boards
-- Votes
-- Comments
+- [Canny REST API](https://apis.io/collections/canny/open-canny/)
+- [Canny REST Autopilot API](https://apis.io/collections/canny/open-canny-autopilot-api/)
+- [Canny REST Autopilot Boards API](https://apis.io/collections/canny/open-canny-boards-api/)
+- [Canny REST Autopilot Categories API](https://apis.io/collections/canny/open-canny-categories-api/)
+- [Canny REST Autopilot ChangelogEntries API](https://apis.io/collections/canny/open-canny-changelogentries-api/)
+- [Canny REST Autopilot Comments API](https://apis.io/collections/canny/open-canny-comments-api/)
+- [Canny REST Autopilot Companies API](https://apis.io/collections/canny/open-canny-companies-api/)
+- [Canny REST Autopilot Groups API](https://apis.io/collections/canny/open-canny-groups-api/)
+- [Canny REST Autopilot Ideas API](https://apis.io/collections/canny/open-canny-ideas-api/)
+- [Canny REST Autopilot Insights API](https://apis.io/collections/canny/open-canny-insights-api/)
+- [Canny REST Autopilot Opportunities API](https://apis.io/collections/canny/open-canny-opportunities-api/)
+- [Canny REST Autopilot Posts API](https://apis.io/collections/canny/open-canny-posts-api/)
+- [Canny REST Autopilot StatusChanges API](https://apis.io/collections/canny/open-canny-statuschanges-api/)
+- [Canny REST Autopilot Tags API](https://apis.io/collections/canny/open-canny-tags-api/)
+- [Canny REST Autopilot Users API](https://apis.io/collections/canny/open-canny-users-api/)
+- [Canny REST Autopilot Votes API](https://apis.io/collections/canny/open-canny-votes-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developers.canny.io/)
-- [API Reference](https://developers.canny.io/api-reference)
-- [Help  Article](https://help.canny.io/en/articles/4195400-the-canny-api)
-- [Postman Collection](collections/canny.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/canny.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Canny Authentication](https://apis.io/security/canny/canny-authentication/)
+- [Canny Domain Security](https://apis.io/security/canny/canny-domain-security/)
 
-- [GitHub Organization](https://github.com/Canny)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://canny.io)
-- [Developer  Portal](https://developers.canny.io)
 - [Documentation](https://developers.canny.io/)
 - [Pricing](https://canny.io/pricing)
-- [Sign Up](https://canny.io/signup)
-- [Help  Center](https://help.canny.io)
-- [LinkedIn](https://www.linkedin.com/company/canny-io)
-- [L L Ms Txt](https://canny.io/llms.txt)
+- [Blog](https://canny.io/blog/feed)
+- [GitHub](https://github.com/Canny)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 33.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 43.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 23.7 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/canny/](https://apis.io/providers/canny/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Canny: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/canny/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
